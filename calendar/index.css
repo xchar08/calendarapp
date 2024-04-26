@@ -1,11 +1,16 @@
-.body{
+
+
+body{
+    background-color: #FFFFFF;
+
     background-color: #BFD7EB;
-    color: #BFD7EB;
 }
 
 /* Container for each row */
 .calendar-block {
     display: flex;
+    
+
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -13,6 +18,8 @@
     border-bottom: 1px solid #ccc; /* Separates each row */
     width:60px;
     height: 60px;
+
+    background-color: #BFD7EB;
 }
 
 /* Style for each span element inside calendar-block */
@@ -27,6 +34,7 @@
     height: 60px;
     border: 1px solid black; /* Border around each span */
     background-color: #f0f0f0; /* Background color */
+    
 }
 
 /* Hover effect for each button */
@@ -83,6 +91,7 @@
 .form-container input[type=text], .form-container input[type=lang] {
   width: 100%;
   padding: 15px;
+  background-color: #FFFFFF;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
@@ -113,10 +122,12 @@
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
+
   opacity: 1;
 } 
 
 .dropdown-t{
+    background-color: #FFFFFF;
     position: relative;
     display: inline-block;
     padding: 10px;
@@ -125,13 +136,27 @@
 }
 
 .bigheader{
+    background-color: #FFFFFF;
     font-size: 80px;
     font-weight: 600;
     color: #000;
     margin-bottom: -80px;
     padding-left: 90px;
+    background-color: #BFD7EB;
 }
 
 .mg{
+    background-color: #FFFFFF;
     padding-right: 100px;
+}
+
+.button:active,
+.active {
+  top: 2px;
+  left: 1px;
+  box-shadow: none;
+}
+
+.myBookForm{
+    display: none;
 }
