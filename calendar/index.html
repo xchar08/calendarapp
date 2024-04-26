@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='index.css'>
+</head>
+
+<body>
+    <p class="bigheader">Calendar</p>
+    <div class="calendar-border">
+        <div class="calendar-block">
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">1</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">2</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">3</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">4</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">5</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">6</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">7</button></span>
+        </div>
+        <div class="calendar-block">
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">8</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">9</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">10</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">11</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">12</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">13</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">14</button></span>
+        </div>
+        <div class="calendar-block">
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">15</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">16</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">17</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">18</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">19</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">20</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">21</button></span>
+        </div>
+        <div class="calendar-block">
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">22</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">23</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">24</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">25</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">26</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">27</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">28</button></span>
+        </div>
+        <div class="calendar-block">
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">29</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">30</button></span>
+            <span class="calendar-elem"><button class="calendar-elem" onclick="openForm()" style="border-style:inset;">31</button></span>
+            <span class="calendar-elem" style="visibility: hidden;"><button class="calendar-elem""></button> </span>
+            <span class="calendar-elem" style="visibility: hidden;"><button class="calendar-elem"></button> </span>
+            <span class="calendar-elem" style="visibility: hidden;"><button class="calendar-elem"></button> </span>
+            <span class="calendar-elem" style="visibility: hidden;"><button class="calendar-elem"></button> </span>
+        </div>
+    </div>
+
+    <!-- The form -->
+    <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Login</h1>
+
+      <div class="mg"><label for="lang"><b>Availible Times</b></label></div>
+      <div class = "dropdown-t"><select name="Availible Times" id="times" multiple>
+        <option value="6:00am">6:00am</option>
+        <option value="7:00am">7:00am</option>
+        <option value="8:00am">8:00am</option>
+        <option value="10:00am">10:00am</option>
+        <option value="1:00pm">1:00pm</option>
+        <option value="1:30pm">1:30pm</option>
+        <option value="4:00pm">4:00pm</option>
+        <option value="6:00pm">6:00pm</option>
+      </select>
+    
+    </div>
+
+    <div class="mg"><label for="lang"><b>Advisor Name</b></label></div>
+    <div class = "dropdown-t"><select name="Advisor Name" id="times" multiple>
+      <option value="6:00am">Suzie</option>
+      <option value="7:00am">Sally</option>
+      <option value="8:00am">Greg</option>
+    </select>
+  
+  </div>
+
+  
+      <button type="submit" class="btn">Book Appointment</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+    </form>
+  </div>
+</body>
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    } 
+</script>
+
+</html>
